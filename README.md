@@ -17,6 +17,12 @@ Other frameworks deal with HTML’s shortcomings by either abstracting away HTML
 AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs. Read on to find out how.
 
 #Angular application  setup #
+
 1)app contains setup of angular with grunt bower
 2)app contains setup with ui-routing 
-3) app contains angular form handeling 
+3)app contains angular form handeling 
+4) run simple commands 
+npm install to fetch all node-modules
+bower install
+and then run grunt commands to run  task runner
+
