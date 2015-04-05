@@ -1,0 +1,93 @@
+<div ng-app="Mainapp"
+ class="ng-scope">
+
+ <div   ng-form="rideInfoForm" ng-controller="sample3Controller">
+
+  <div class='row well  col-md-12'>
+      
+        
+   <!--TAB 1 DATA  -->
+       
+      <div class="page-header">
+        <h1>{{form}}</h1>
+      </div>
+      <div role="alert" class="alert alert-success" ng-show="showSuccessMessage">
+        <strong>Well done!</strong> Ride details saved successfully.
+      </div>
+      <div role="alert" class="alert alert-danger" ng-show="showErrorMessage">
+        <strong>Oh snap!</strong> Please fix the errors below to continue.
+      </div>
+     <div class="row">
+     
+      <div class="form-horizontal col-sm-8">
+        <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.userName.$invalid && submitted}">
+      
+          <label for="userName" class="col-sm-4 control-label">Name <span style="color:red;">*</span></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" name="userName" ng-model="rideInfo.userName" id="userName" ng-required="true">
+              <span class="label label-danger" ng-show="submitted && rideInfoForm.userName.$error.required">Required!</span>
+          
+          </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.phoneNumber.$invalid && submitted}">
+          <label for="phoneNumber" class="col-sm-4 control-label">Phone Number <span style="color:red;">*</span></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" name="phoneNumber" ng-model="rideInfo.phoneNumber" id="phoneNumber" ng-required = "true">
+           <span class="label label-danger" ng-show="submitted && rideInfoForm.phoneNumber.$error.required">Required!</span>
+              
+          </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.email.$invalid && submitted}">
+          <label for="phoneNumber" class="col-sm-4 control-label">Email-ID <span style="color:red;">*</span></label>
+          <div class="col-sm-8">
+           <input type="email" class="form-control" name="email" ng-model="rideInfo.email" id="email" ng-required = "true">
+           <span  class="label label-danger" data-ng-show="submitted && rideInfoForm.email.$error.required">Required!</span>
+            <span class="label label-danger" data-ng-show="submitted && rideInfoForm.$error.email">Invalid email!</span>
+          </div>
+        </div>
+
+
+        <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.password.$invalid && submitted}">
+          <label for="Source" class="col-sm-4 control-label">password <span style="color:red;">*</span></label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control" name="password" ng-model="rideInfo.password" id="password" ng-required = "true">
+               <span  class="label label-danger" data-ng-show="submitted && rideInfoForm.password.$error.required">Required!</span>
+          
+              
+            </select>
+          </div>
+        </div>
+
+          <div class="form-group" ng-class="{ 'has-error' : rideInfoForm.address.$invalid && submitted}">
+          <label for="Source" class="col-sm-4 control-label">address <span style="color:red;">*</span></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" name="address" ng-model="rideInfo.address" id="address" ng-required = "true">
+                 <span  class="label label-danger" data-ng-show="submitted && rideInfoForm.address.$error.required">Required!</span>
+            </select>
+          </div>
+        </div>
+      
+    
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-8">
+            <a href=""  ng-click="addRide()" class="btn btn-primary">Save</a>
+            <a href="#/" class="btn btn-default">Cancel</a>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+
+
+      </div>
+      
+    </div>
+   </div>
+
+
+
+

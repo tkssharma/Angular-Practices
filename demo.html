@@ -1,0 +1,93 @@
+language translation of fetched data or fetch data according to lang code 
+Lot of parameter in html form  so developmnt problems  and less customization support 
+
+
+
+<div class="container">
+    <h4>request JSON to JSON</h4>
+
+    <div data-ng-controller="formController">
+
+      <div id="messages" class="alert alert-success"
+        data-ng-show="messages" data-ng-bind="messages"></div>
+
+      <div data-ng-show="progress.active()"
+        style="color: red; font-size: 50px;">Sending&hellip;</div>
+
+      <form name="helpForm" novalidate role="form" class="well col-md-12">
+        <div class="form-group">
+          <label for="name">Your Name </label> <span
+            class="label label-danger"
+            data-ng-show="submitted && helpForm.name.$error.required">Required!</span>
+          <input type="text" name="name" data-ng-model="name"
+            class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your E-mail address</label> <span
+            class="label label-danger"
+            data-ng-show="submitted && helpForm.email.$error.required">Required!</span>
+
+            
+          <span class="label label-danger"
+            data-ng-show="submitted && helpForm.$error.email">Invalid
+            email!</span> 
+
+		<input type="email" name="email" data-ng-model="email"
+            class="form-control" required />
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="url">Password</label> <span class="label label-danger"
+            data-ng-show="submitted && helpForm.password.$error.required">Required!</span>
+          <input type="text" name="password" data-ng-model="password"
+            class="form-control" required />
+        </div>
+
+
+        <div class="form-group">
+          <label for="url">Address</label> <span class="label label-danger"
+            data-ng-show="submitted && helpForm.address.$error.required">Required!</span>
+          <input type="text" name="address" data-ng-model="address"
+            class="form-control" required />
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="comments">Description</label> <span
+            class="label label-danger"
+            data-ng-show="submitted && helpForm.comments.$error.required">Required!</span>
+          <textarea name="comments" data-ng-model="comments"
+            class="form-control" required></textarea>
+        </div>
+
+        <button data-ng-disabled="progress.active()"
+          data-ng-click="submit(helpForm)" class="btn btn-default">Submit</button>
+      </form>
+
+
+      <div>
+        <h4>{{variable}}</h4>
+        <b>You had sent below data through post:</b>
+        <p>Response: {{reponse}}</p>
+        <div data-ng-repeat="data in reponse">
+          <h4>{{data.name}}</h4>
+          <h4>{{data.email}}</h4>
+          <h4>{{data.password}}</h4>
+          <h4>{{data.comments}}</h4>
+          <h4>{{data.address}}</h4>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script
+    src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+

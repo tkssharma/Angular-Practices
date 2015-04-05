@@ -1,0 +1,16 @@
+
+
+<div ng-app="Mainapp" ng-controller="sample2Controller" >
+
+<div class=" container well">
+<h1>Filter app</h1>
+<input type"text" ng-model ="search.$"/>
+<div ng-repeat="names in result  | filter:search  ">
+	<input type="text" ng-model="names.fname" />
+	<input type="text" ng-model="names.lname"/>
+
+</div>
+</div>
+
+
+</div>

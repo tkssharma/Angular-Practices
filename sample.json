@@ -1,0 +1,8 @@
+[{ "id": "1" ,"question":"What type of benefits are you looking for?", "type":"checkbox" , "cssclass":"xyz" , "options" : [ "Child Care/Child Support","Counsel/Counseling","Disability Assistance","Disaster Relief","Education/Training","Employment/Career Development Assistance","Energy Assistance","Environmental Sustainability/Conservation","Food/Nutrition","Grants/Scholarships/Fellowships","HIV/AIDS","Healthcare"] },
+{ "id": "2","question":"What is your Date of Birth?", "type":"text" , "name" : "dob" , "cssclass":"xyz" , "placeholder" : "enter value here .." },
+{ "id": "3","question":"What city do you live in?", "type":"text" , "name" : "city" , "cssclass":"xyz" , "placeholder" : "enter value here .." },
+{ "id": "4" ,"question" : "Choose the option which best describes your citizenship?", "type":"radio", "name" :"citizenship",   "cssclass":"xyz" , "values" : [ "U.S. Citizen","U.S. National", "Non-Citizen legally admitted to the U.S ", "American Indian","Other"]}
+]
+
+
+

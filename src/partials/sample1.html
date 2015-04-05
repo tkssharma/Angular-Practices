@@ -1,0 +1,18 @@
+
+
+<div ng-app="Mainapp" ng-controller="sample1Controller" >
+
+<div class=" container well">
+<h1>scope app</h1>
+<div class="form-group" ng-repeat='item in items'>
+  <span>{{item.title}}</span>
+  <input ng-model='item.quantity'>
+  <span>{{item.price | currency}}</span>
+  <b><span>{{item.price * item.quantity | currency}}</span></b>
+  <button ng-click="remove($index)">Remove</button>
+  {{$index}}
+</div>
+</div>
+
+
+</div>
